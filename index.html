@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Gracefully catch and suppress Vite HMR WebSocket connection errors in sandbox iframe
+      window.addEventListener('unhandledrejection', function(event) {
+        if (
+          event.reason &&
+          (String(event.reason.message || event.reason).includes('WebSocket') ||
+           String(event.reason.stack || '').includes('@vite/client') ||
+           String(event.reason.stack || '').includes('createWebSocketModuleRunnerTransport'))
+        ) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        if (
+          String(event.message || '').includes('WebSocket') ||
+          String(event.filename || '').includes('@vite/client')
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebToPDF Studio & Slovak Translator</title>
+    <meta name="description" content="Convert any website into customizable, editable PDFs with automated Slovak translation, fillable form fields, and live visual page editing." />
+    <meta property="og:title" content="WebToPDF Studio & Slovak Translator" />
+    <meta property="og:description" content="Convert any website into customizable, editable PDFs with automated Slovak translation, fillable form fields, and live visual page editing." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

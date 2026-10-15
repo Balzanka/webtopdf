@@ -1,0 +1,6 @@
+{
+  "name": "WebToPDF Studio & Slovak Translator",
+  "description": "Convert any website into customizable, editable PDFs with automated Slovak translation, fillable form fields, and live visual page editing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

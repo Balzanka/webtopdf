@@ -1,0 +1,410 @@
+import { DocumentBlock, DocumentMetadata } from '../types/document';
+
+export interface SampleWebsite {
+  id: string;
+  name: string;
+  category: string;
+  url: string;
+  metadata: DocumentMetadata;
+  blocks: DocumentBlock[];
+}
+
+export const SAMPLE_WEBSITES: SampleWebsite[] = [
+  {
+    id: 'green-initiative',
+    name: 'EÚ Iniciatíva pre zelenú energiu a fotovoltiku',
+    category: 'Oficiálny report & legislatíva',
+    url: 'https://ec.europa.eu/energy/solar-strategy-framework',
+    metadata: {
+      title: 'Európska solárna stratégia a transformácia energetiky 2030',
+      originalTitle: 'EU Solar Energy Strategy & 2030 Power Framework',
+      slovakTitle: 'Európska solárna stratégia a transformácia energetiky 2030',
+      sourceUrl: 'https://ec.europa.eu/energy/solar-strategy-framework',
+      author: 'Európska komisia - Generálne riaditeľstvo pre energetiku',
+      date: new Date().toLocaleDateString('sk-SK'),
+      description: 'Záväzný rámec pre inštaláciu solárnych systémov na verejných a komerčných budovách v členských štátoch.',
+      slovakSummary: 'Tento dokument definuje ciele Európskej únie v oblasti obnoviteľných zdrojov so zameraním na povinné fotovoltické inštalácie na komerčných a verejných budovách do roku 2027 a prechod k uhlíkovej neutralite.',
+      pageSize: 'A4',
+      orientation: 'portrait',
+      fontFamily: 'sans',
+      fontSize: 'base',
+      headerText: 'Oficiálny dokument EÚ / Pracovná verzia pre implementáciu v SR',
+      footerText: 'Konvertované nástrojom WebToPDF • Slovenské národné znenie',
+      showPageNumbers: true,
+      showSourceHeader: true,
+    },
+    blocks: [
+      {
+        id: 'b-h1',
+        type: 'h1',
+        content: 'European Solar Energy Strategy and 2030 Decarbonization Mandate',
+        originalContent: 'European Solar Energy Strategy and 2030 Decarbonization Mandate',
+        slovakContent: 'Európska solárna stratégia a mandát pre dekarbonizáciu do roku 2030',
+      },
+      {
+        id: 'b-callout',
+        type: 'callout',
+        content: 'Official executive summary intended for regional ministries, municipal planners, and certified energy auditors.',
+        originalContent: 'Official executive summary intended for regional ministries, municipal planners, and certified energy auditors.',
+        slovakContent: 'Oficiálne výkonné zhrnutie určené pre ministerstvá, mestských plánovačov a autorizovaných energetických audítorov v Slovenskej republike.',
+      },
+      {
+        id: 'b-p1',
+        type: 'paragraph',
+        content: 'Solar photovoltaic energy represents one of the fastest deployable and most cost-effective technologies available to reduce dependency on fossil fuel imports. Under the revised REPowerEU directive, the target for cumulative solar capacity has been established at 600 GWac by 2030.',
+        originalContent: 'Solar photovoltaic energy represents one of the fastest deployable and most cost-effective technologies available to reduce dependency on fossil fuel imports. Under the revised REPowerEU directive, the target for cumulative solar capacity has been established at 600 GWac by 2030.',
+        slovakContent: 'Solárna fotovoltická energia predstavuje jednu z najrýchlejšie nasaditeľných a nákladovo najefektívnejších technológií na zníženie závislosti od dovozu fosílnych palív. V rámci revidovanej smernice REPowerEU bol cieľ pre kumulatívnu solárnu kapacitu stanovený na 600 GWac do roku 2030.',
+      },
+      {
+        id: 'b-h2-1',
+        type: 'h2',
+        content: 'Key Milestones for Rooftop Solar Standards',
+        originalContent: 'Key Milestones for Rooftop Solar Standards',
+        slovakContent: 'Kľúčové míľniky pre štandardy strešných solárnych inštalácií',
+      },
+      {
+        id: 'b-list-1',
+        type: 'list',
+        listType: 'unordered',
+        listItems: [
+          'Mandatory solar installations on all new public and commercial buildings with usable floor area > 250 m² by December 2026.',
+          'Retrofitting of existing public buildings by end of 2027.',
+          'Streamlined permitting process capped at a maximum turnaround of 3 months for installations under 50 kW.',
+          'Integration of local battery energy storage systems (BESS) for grid frequency stabilization.',
+        ],
+        originalListItems: [
+          'Mandatory solar installations on all new public and commercial buildings with usable floor area > 250 m² by December 2026.',
+          'Retrofitting of existing public buildings by end of 2027.',
+          'Streamlined permitting process capped at a maximum turnaround of 3 months for installations under 50 kW.',
+          'Integration of local battery energy storage systems (BESS) for grid frequency stabilization.',
+        ],
+        slovakListItems: [
+          'Povinná inštalácia fotovoltiky na všetkých nových verejných a komerčných budovách s úžitkovou plochou > 250 m² do decembra 2026.',
+          'Dodatočné vybavenie existujúcich verejných budov solárnymi panelmi do konca roka 2027.',
+          'Zjednodušené povoľovacie konanie obmedzené na maximálnu lehotu 3 mesiacov pre inštalácie do 50 kW.',
+          'Integrácia lokálnych batériových úložísk energie (BESS) na stabilizáciu distribučnej siete.',
+        ],
+      },
+      {
+        id: 'b-table-1',
+        type: 'table',
+        tableData: {
+          headers: ['Členský štát / Segment', 'Cieľová kapacita 2026', 'Cieľ 2030', 'Alokácia z fondu obnovy (€)'],
+          rows: [
+            ['Slovensko (komerčný sektor)', '850 MWp', '2 100 MWp', '412 000 000 €'],
+            ['Slovensko (rezidenčné budovy)', '420 MWp', '1 250 MWp', '230 000 000 €'],
+            ['Česká republika', '1 900 MWp', '4 500 MWp', '890 000 000 €'],
+            ['Poľsko', '5 200 MWp', '11 800 MWp', '2 150 000 000 €'],
+          ],
+        },
+        originalTableData: {
+          headers: ['Member State / Segment', '2026 Target Capacity', '2030 Objective', 'Recovery Fund Allocation (€)'],
+          rows: [
+            ['Slovakia (Commercial Sector)', '850 MWp', '2,100 MWp', '€412,000,000'],
+            ['Slovakia (Residential Housing)', '420 MWp', '1,250 MWp', '€230,000,000'],
+            ['Czech Republic', '1,900 MWp', '4,500 MWp', '€890,000,000'],
+            ['Poland', '5,200 MWp', '11,800 MWp', '€2,150,000,000'],
+          ],
+        },
+        slovakTableData: {
+          headers: ['Členský štát / Segment', 'Cieľová kapacita 2026', 'Cieľ 2030', 'Alokácia z fondu obnovy (€)'],
+          rows: [
+            ['Slovensko (komerčný sektor)', '850 MWp', '2 100 MWp', '412 000 000 €'],
+            ['Slovensko (rezidenčné budovy)', '420 MWp', '1 250 MWp', '230 000 000 €'],
+            ['Česká republika', '1 900 MWp', '4 500 MWp', '890 000 000 €'],
+            ['Poľsko', '5 200 MWp', '11 800 MWp', '2 150 000 000 €'],
+          ],
+        },
+      },
+      {
+        id: 'b-quote-1',
+        type: 'quote',
+        content: '“Clean energy independence is not only an ecological requirement, but the primary pillar of regional industrial competitiveness.”',
+        originalContent: '“Clean energy independence is not only an ecological requirement, but the primary pillar of regional industrial competitiveness.”',
+        slovakContent: '„Nezávislosť na čistej energii nie je len ekologickou požiadavkou, ale primárnym pilierom regionálnej priemyselnej konkurencieschopnosti.“',
+      },
+      {
+        id: 'b-form-dept',
+        type: 'form-field',
+        formField: {
+          type: 'text',
+          label: 'Názov žiadajúcej inštitúcie / Applicant Department:',
+          placeholder: 'napr. Odbor územného rozvoja a investícií',
+          defaultValue: '',
+          fieldName: 'applicant_institution',
+        },
+      },
+      {
+        id: 'b-form-check',
+        type: 'form-field',
+        formField: {
+          type: 'checkbox',
+          label: 'Potvrdzujem splnenie technických podmienok pre pripojenie do distribučnej sústavy SR',
+          checked: true,
+          fieldName: 'grid_compliance_confirmed',
+        },
+      },
+      {
+        id: 'b-form-officer',
+        type: 'form-field',
+        formField: {
+          type: 'text',
+          label: 'Zodpovedný energetický audítor / Authorized Energy Auditor:',
+          placeholder: 'Ing. Peter Horváth, PhD.',
+          defaultValue: '',
+          fieldName: 'auditor_name',
+        },
+      },
+      {
+        id: 'b-form-date',
+        type: 'form-field',
+        formField: {
+          type: 'date',
+          label: 'Dátum vyhotovenia a platnosti / Date of Issue:',
+          defaultValue: new Date().toISOString().split('T')[0],
+          fieldName: 'issue_date',
+        },
+      },
+      {
+        id: 'b-form-sig',
+        type: 'form-field',
+        formField: {
+          type: 'signature',
+          label: 'Autorizačný podpis a pečiatka / Certified Signature:',
+          placeholder: '[Elektronicky podpísané alebo fyzický podpis]',
+          defaultValue: '',
+          fieldName: 'auditor_signature',
+        },
+      },
+    ],
+  },
+  {
+    id: 'sla-contract',
+    name: 'Zmluva o poskytovaní cloudových služieb a SLA',
+    category: 'Právna zmluva & SLA',
+    url: 'https://cloud-enterprise.io/legal/terms-and-sla',
+    metadata: {
+      title: 'Zmluva o garantovanej úrovni poskytovania služieb (SLA) a licenčné podmienky',
+      originalTitle: 'Enterprise Cloud Service Level Agreement & Master Terms',
+      slovakTitle: 'Zmluva o garantovanej úrovni poskytovania služieb (SLA) a licenčné podmienky',
+      sourceUrl: 'https://cloud-enterprise.io/legal/terms-and-sla',
+      author: 'Právne oddelenie Cloud Enterprise Inc.',
+      date: new Date().toLocaleDateString('sk-SK'),
+      description: 'Záväzné právne podmienky prevádzky, dostupnosti 99.99% a ochrany osobných údajov.',
+      slovakSummary: 'Zmluva špecifikuje povinnosti poskytovateľa cloudovej infraštruktúry, kompenzácie pri výpadku a dodržiavanie nariadenia GDPR pre spracovanie údajov klientov v EÚ.',
+      pageSize: 'A4',
+      orientation: 'portrait',
+      fontFamily: 'serif',
+      fontSize: 'base',
+      headerText: 'Dôverné • Právna zmluva o úrovni služieb (SLA)',
+      footerText: 'Strana vygenerovaná systémom WebToPDF v slovenskom znení',
+      showPageNumbers: true,
+      showSourceHeader: true,
+    },
+    blocks: [
+      {
+        id: 'sla-h1',
+        type: 'h1',
+        content: 'Enterprise Cloud Service Level Agreement (SLA)',
+        originalContent: 'Enterprise Cloud Service Level Agreement (SLA)',
+        slovakContent: 'Zmluva o garantovanej úrovni cloudových služieb (SLA)',
+      },
+      {
+        id: 'sla-p1',
+        type: 'paragraph',
+        content: 'This Service Level Agreement governs the provision of enterprise cloud computing services. The Service Provider commits to delivering an uptime ratio of 99.99% across all redundant European availability zones, excluding scheduled quarterly maintenance windows.',
+        originalContent: 'This Service Level Agreement governs the provision of enterprise cloud computing services. The Service Provider commits to delivering an uptime ratio of 99.99% across all redundant European availability zones, excluding scheduled quarterly maintenance windows.',
+        slovakContent: 'Táto zmluva o úrovni služieb upravuje poskytovanie podnikových cloudových výpočtových služieb. Poskytovateľ sa zaväzuje zabezpečiť dostupnosť na úrovni 99,99 % vo všetkých redundantných európskych zónach dostupnosti, s výnimkou plánovaných štvrťročných okien údržby.',
+      },
+      {
+        id: 'sla-h2-credits',
+        type: 'h2',
+        content: 'Service Credits and Outage Penalties',
+        originalContent: 'Service Credits and Outage Penalties',
+        slovakContent: 'Kreditné kompenzácie a zmluvné sankcie za výpadok',
+      },
+      {
+        id: 'sla-tbl',
+        type: 'table',
+        tableData: {
+          headers: ['Mesačná dostupnosť systému', 'Výška zľavy / Kreditu na faktúre', 'Reakčná doba podpory (SLA)'],
+          rows: [
+            ['Menej ako 99.99 %, ale aspoň 99.00 %', '15 % z mesačného poplatku', '< 30 minút'],
+            ['Menej ako 99.00 %, ale aspoň 95.00 %', '35 % z mesačného poplatku', '< 15 minút'],
+            ['Menej ako 95.00 %', '100 % z mesačného poplatku', 'Okamžitá eskalácia (L3)'],
+          ],
+        },
+        originalTableData: {
+          headers: ['Monthly System Uptime', 'Invoice Service Credit', 'Response Time Guarantee'],
+          rows: [
+            ['Less than 99.99% but >= 99.00%', '15% of monthly billing', '< 30 minutes'],
+            ['Less than 99.00% but >= 95.00%', '35% of monthly billing', '< 15 minutes'],
+            ['Less than 95.00%', '100% of monthly billing', 'Immediate L3 Escalation'],
+          ],
+        },
+        slovakTableData: {
+          headers: ['Mesačná dostupnosť systému', 'Výška zľavy / Kreditu na faktúre', 'Reakčná doba podpory (SLA)'],
+          rows: [
+            ['Menej ako 99.99 %, ale aspoň 99.00 %', '15 % z mesačného poplatku', '< 30 minút'],
+            ['Menej ako 99.00 %, ale aspoň 95.00 %', '35 % z mesačného poplatku', '< 15 minút'],
+            ['Menej ako 95.00 %', '100 % z mesačného poplatku', 'Okamžitá eskalácia (L3)'],
+          ],
+        },
+      },
+      {
+        id: 'sla-form-client',
+        type: 'form-field',
+        formField: {
+          type: 'text',
+          label: 'Obchodné meno odberateľa / Company Name:',
+          placeholder: 'napr. Slovenská Softvérová Spoločnosť s.r.o.',
+          defaultValue: '',
+          fieldName: 'client_company_name',
+        },
+      },
+      {
+        id: 'sla-form-ico',
+        type: 'form-field',
+        formField: {
+          type: 'text',
+          label: 'IČO / Daňové identifikačné číslo (DIČ / IČ DPH):',
+          placeholder: '12345678 / SK2021234567',
+          defaultValue: '',
+          fieldName: 'company_ico_dic',
+        },
+      },
+      {
+        id: 'sla-form-agree',
+        type: 'form-field',
+        formField: {
+          type: 'checkbox',
+          label: 'Súhlasím so zmluvnými podmienkami spracovania údajov v súlade s GDPR',
+          checked: true,
+          fieldName: 'gdpr_consent',
+        },
+      },
+      {
+        id: 'sla-form-rep',
+        type: 'form-field',
+        formField: {
+          type: 'text',
+          label: 'Štatutárny zástupca / Legal Representative:',
+          placeholder: 'Meno a funkcia (konateľ, riaditeľ)',
+          defaultValue: '',
+          fieldName: 'statutory_representative',
+        },
+      },
+      {
+        id: 'sla-form-sig',
+        type: 'form-field',
+        formField: {
+          type: 'signature',
+          label: 'Podpis zmluvných strán / Signature:',
+          placeholder: '[Podpis konateľa]',
+          defaultValue: '',
+          fieldName: 'contract_signature',
+        },
+      },
+    ],
+  },
+  {
+    id: 'tech-hub',
+    name: 'Slovenské inovačné a technologické centrum 2026',
+    category: 'Hospodársky článok & Report',
+    url: 'https://innovationslovakia.sk/report/digital-ecosystem-2026',
+    metadata: {
+      title: 'Správa o stave digitálneho ekosystému a startupov na Slovensku',
+      originalTitle: 'Slovakia Digital Ecosystem and Deep Tech Report 2026',
+      slovakTitle: 'Správa o stave digitálneho ekosystému a startupov na Slovensku',
+      sourceUrl: 'https://innovationslovakia.sk/report/digital-ecosystem-2026',
+      author: 'Slovenská inovačná a energetická agentúra (SIEA)',
+      date: new Date().toLocaleDateString('sk-SK'),
+      description: 'Prehľad rastu technologického sektora, investícií do umelej inteligencie a kľúčových slovenských hubov.',
+      slovakSummary: 'Slovenský technologický sektor zaznamenal v uplynulom roku nárast rizikového kapitálu o 38%, predovšetkým v oblastiach priemyselnej automatizácie, kybernetickej bezpečnosti a AI.',
+      pageSize: 'A4',
+      orientation: 'portrait',
+      fontFamily: 'sans',
+      fontSize: 'base',
+      headerText: 'Analytický prehľad slovenského trhu • Bratislava - Košice - Žilina',
+      footerText: 'Publikované s podporou národných inovačných schém',
+      showPageNumbers: true,
+      showSourceHeader: true,
+    },
+    blocks: [
+      {
+        id: 'th-h1',
+        type: 'h1',
+        content: 'Annual Assessment of Slovakia\'s Tech and AI Innovation Ecosystem',
+        originalContent: 'Annual Assessment of Slovakia\'s Tech and AI Innovation Ecosystem',
+        slovakContent: 'Výročné hodnotenie slovenského inovačného a technologického ekosystému',
+      },
+      {
+        id: 'th-p1',
+        type: 'paragraph',
+        content: 'The Slovak technological sector has demonstrated resilient growth over the past fiscal period. With established R&D hubs in Bratislava and Košice, the integration of generative AI into automotive manufacturing and cybersecurity has unlocked unprecedented export value.',
+        originalContent: 'The Slovak technological sector has demonstrated resilient growth over the past fiscal period. With established R&D hubs in Bratislava and Košice, the integration of generative AI into automotive manufacturing and cybersecurity has unlocked unprecedented export value.',
+        slovakContent: 'Slovenský technologický sektor preukázal v uplynulom fiškálnom období výrazný rast. Vďaka etablovaným výskumným centrám v Bratislave a Košiciach priniesla integrácia generatívnej umelej inteligencie do automobilovej výroby a kybernetickej bezpečnosti nebývalú exportnú hodnotu.',
+      },
+      {
+        id: 'th-h2-key',
+        type: 'h2',
+        content: 'Strategic Focus Areas for Public-Private Partnerships',
+        originalContent: 'Strategic Focus Areas for Public-Private Partnerships',
+        slovakContent: 'Strategické oblasti pre partnerstvá verejného a súkromného sektora',
+      },
+      {
+        id: 'th-list',
+        type: 'list',
+        listType: 'ordered',
+        listItems: [
+          'National Supercomputing Infrastructure upgrade with accelerated GPU clusters.',
+          'Tax incentives and patent box regimes for domestic software intellectual property.',
+          'Specialized university research grants bridging quantum security and robotics.',
+        ],
+        originalListItems: [
+          'National Supercomputing Infrastructure upgrade with accelerated GPU clusters.',
+          'Tax incentives and patent box regimes for domestic software intellectual property.',
+          'Specialized university research grants bridging quantum security and robotics.',
+        ],
+        slovakListItems: [
+          'Modernizácia národnej superpočítačovej infraštruktúry s GPU klastrami pre strojové učenie.',
+          'Daňové stimuly a režim patent boxu pre domáce duševné vlastníctvo v oblasti softvéru.',
+          'Špecializované univerzitné výskumné granty prepájajúce kvantovú bezpečnosť a robotiku.',
+        ],
+      },
+      {
+        id: 'th-form-notes',
+        type: 'form-field',
+        formField: {
+          type: 'textarea',
+          label: 'Pripomienky a odporúčania expertnej komisie:',
+          placeholder: 'Doplňte stanovisko k alokácii grantových prostriedkov...',
+          defaultValue: '',
+          fieldName: 'commission_recommendations',
+        },
+      },
+      {
+        id: 'th-form-chair',
+        type: 'form-field',
+        formField: {
+          type: 'text',
+          label: 'Predseda hodnotiacej komisie:',
+          placeholder: 'Prof. RNDr. Milan Kováč, DrSc.',
+          defaultValue: '',
+          fieldName: 'evaluator_chair',
+        },
+      },
+      {
+        id: 'th-form-sig',
+        type: 'form-field',
+        formField: {
+          type: 'signature',
+          label: 'Potvrdenie a registrácia:',
+          placeholder: '[Elektronická pečať]',
+          defaultValue: '',
+          fieldName: 'registration_seal',
+        },
+      },
+    ],
+  },
+];
